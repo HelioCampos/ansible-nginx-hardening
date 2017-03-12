@@ -1,1 +1,2 @@
-- src: https://github.com/rndmh3ro/ansible-role-nginx
+- src: https://github.com/rndmh3ro/ansible-role-nginx/archive/master.zip
+  name: rndmh3ro.nginx
