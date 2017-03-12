@@ -2,5 +2,5 @@
 - name: wrapper playbook for kitchen testing "ansible-nginx-hardening" with custom settings
   hosts: localhost
   roles:
-    - geerlingguy.nginx
+    - rndmh3ro.nginx
     - ansible-nginx-hardening
