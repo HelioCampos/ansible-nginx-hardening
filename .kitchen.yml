@@ -23,8 +23,6 @@ provisioner:
   https_proxy: <%= ENV['https_proxy'] || nil %>
   playbook: default.yml
   requirements_path: requirements.yml
-  ansible_extra_flags:
-    - "--skip-tags=sysctl"
 
 platforms:
 - name: centos6-ansible-latest
