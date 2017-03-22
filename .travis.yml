@@ -59,6 +59,7 @@ script:
   - 'docker exec "$(cat ${container_id})" ansible-galaxy install -r /etc/ansible/roles/ansible-nginx-hardening/requirements.yml -p /etc/ansible/roles/'
 
   # Test role.
+  - 'docker exec "$(cat ${container_id})" ansible -m package -a "name=systemd state=present || true'
   - 'docker exec "$(cat ${container_id})" ansible-playbook /etc/ansible/roles/ansible-nginx-hardening/default.yml -vv'
   - 'docker exec "$(cat ${container_id})" cat /var/log/nginx/error.log'
   - 'docker exec "$(cat ${container_id})" systemctl status nginx -l'
